@@ -1,0 +1,6 @@
+{
+    "type": "feature",
+    "category": "AWS SDK for Java v2",
+    "contributor": "",
+    "description": "Reduce allocation when building an `Endpoint`. The header and attribute maps are now created only when they are actually populated, which removes 72-80% of the bytes allocated per endpoint resolution for the common endpoint shapes. As part of this, the map returned by `Endpoint#headers()` and the endpoint attribute map are now unmodifiable; mutating a map returned from a getter was never supported and `SdkHttpRequest#headers()` already behaved this way."
+}
